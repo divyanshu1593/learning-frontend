@@ -1,0 +1,56 @@
+* {
+  border: 1px solid red;
+}
+
+body {
+  border: 1px solid black;
+}
+
+nav {
+  height: 10vh;
+  background-color: black;
+  padding-left: 25vw;
+}
+nav button {
+  background-color: black;
+  color: white;
+  flex: 1 1;
+  font-weight: 900;
+}
+
+footer {
+  height: 10vh;
+}
+footer div {
+  flex: 1 1;
+}
+
+#sidebar {
+  width: 20%;
+  flex-grow: 1;
+  flex-shrink: 1;
+}
+
+#main-content {
+  width: 80%;
+  flex-grow: 1;
+  flex-shrink: 1;
+}
+
+.flex-container {
+  display: flex;
+}
+
+.fill-parent {
+  height: 100%;
+  width: 100%;
+}
+
+#twitter-btn {
+  background-color: black;
+  color: white;
+  border: 0px;
+  border-radius: 10px;
+}
+
+/*# sourceMappingURL=index.css.map */

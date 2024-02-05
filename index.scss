@@ -1,0 +1,62 @@
+$sidebar-width: 20%;
+$total-width: 100%;
+$nav-bar-height: 10vh;
+$footer-height: 10vh;
+$nav-bar-left-padding: 25vw;
+
+* {
+  border: 1px solid red;
+}
+
+body {
+  border: 1px solid black;
+}
+
+nav {
+  height: $nav-bar-height;
+  background-color: black;
+  padding-left: $nav-bar-left-padding;
+
+  button {
+    background-color: black;
+    color: white;
+    flex: 1 1;
+    font-weight: 900;
+  }
+}
+
+footer {
+  height: $footer-height;
+  div {
+
+    flex: 1 1;
+  }
+}
+
+#sidebar {
+  width: $sidebar-width;
+  flex-grow: 1;
+  flex-shrink: 1;
+}
+
+#main-content {
+  width: $total-width - $sidebar-width;
+  flex-grow: 1;
+  flex-shrink: 1;
+}
+
+.flex-container {
+  display: flex;
+}
+
+.fill-parent {
+  height: 100%;
+  width: 100%;
+}
+
+#twitter-btn {
+  background-color: black;
+  color: white;
+  border: 0px;
+  border-radius: 10px;
+}

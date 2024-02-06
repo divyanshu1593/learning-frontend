@@ -1,48 +1,85 @@
+@use "sass:math";
+
 $sidebar-width: 20%;
 $total-width: 100%;
 $nav-bar-height: 10vh;
 $footer-height: 10vh;
 $nav-bar-left-padding: 25vw;
-
-* {
-  border: 1px solid red;
-}
-
-body {
-  border: 1px solid black;
-}
+$nav-searchbar-height-ratio: 0.6;
+$search-bar-border-radius: 10px;
 
 nav {
   height: $nav-bar-height;
   background-color: black;
   padding-left: $nav-bar-left-padding;
 
+  input {
+    border-top-right-radius: $search-bar-border-radius;
+    border-bottom-right-radius: $search-bar-border-radius;
+    border: none;
+    height: $nav-bar-height * $nav-searchbar-height-ratio;
+    margin-top: $nav-bar-height * math.div(1 - $nav-searchbar-height-ratio, 2);
+    padding: 0px;
+  }
+
   button {
     background-color: black;
+    border: 0px;
     color: white;
     flex: 1 1;
-    font-weight: 900;
+    font-weight: 800;
   }
+
+  button:hover {
+    background-color: white;
+    color: black;
+  }
+}
+
+#search-icon {
+  background-color: white;
+  height: $nav-bar-height * $nav-searchbar-height-ratio;
+  margin-top: $nav-bar-height * math.div(1 - $nav-searchbar-height-ratio, 2);
+  border: none;
+  border-top-left-radius: $search-bar-border-radius;
+  border-bottom-left-radius: $search-bar-border-radius;
 }
 
 footer {
   height: $footer-height;
   div {
-
     flex: 1 1;
   }
 }
 
 #sidebar {
   width: $sidebar-width;
-  flex-grow: 1;
-  flex-shrink: 1;
+  padding: 2vw;
+
+  a {
+    color: grey;
+    text-decoration: none;
+    font-size: larger;
+  }
+
+  a:hover {
+    color: black;
+    font-weight: 600;
+  }
+
+  div {
+    padding: 1vh;
+  }
 }
 
 #main-content {
   width: $total-width - $sidebar-width;
-  flex-grow: 1;
-  flex-shrink: 1;
+  padding: 2vw;
+
+  code {
+    white-space: pre-line;
+    color: grey;
+  }
 }
 
 .flex-container {
@@ -59,4 +96,8 @@ footer {
   color: white;
   border: 0px;
   border-radius: 10px;
+}
+
+#twitter-btn:hover {
+  box-shadow: 0px 0px 20px grey;
 }

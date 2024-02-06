@@ -10,6 +10,15 @@ $search-bar-border-radius: 10px;
 $nav-bar-color: rgb(50, 202, 253);
 $footer-color: rgb(179, 178, 178);
 
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
 nav {
   height: $nav-bar-height;
   background-color: $nav-bar-color;
@@ -47,9 +56,23 @@ nav {
     font-weight: 800;
   }
 
+  @keyframes change-color {
+    from {
+      background-color: $nav-bar-color;
+      color: white;
+    }
+
+    to {
+      background-color: white;
+      color: black;
+    }
+  }
+
   button:hover {
     background-color: white;
     color: black;
+    animation-name: change-color;
+    animation-duration: 500ms;
     cursor: pointer;
   }
 }
@@ -66,6 +89,7 @@ nav {
 footer {
   height: $footer-height;
   background-color: $footer-color;
+  padding: 15px;
   div {
     flex: 1 1;
   }

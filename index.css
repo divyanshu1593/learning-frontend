@@ -1,3 +1,12 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
 nav {
   height: 10vh;
   background-color: rgb(50, 202, 253);
@@ -36,9 +45,21 @@ nav button {
   flex: 1 1;
   font-weight: 800;
 }
+@keyframes change-color {
+  from {
+    background-color: rgb(50, 202, 253);
+    color: white;
+  }
+  to {
+    background-color: white;
+    color: black;
+  }
+}
 nav button:hover {
   background-color: white;
   color: black;
+  animation-name: change-color;
+  animation-duration: 500ms;
   cursor: pointer;
 }
 
@@ -54,6 +75,7 @@ nav button:hover {
 footer {
   height: 10vh;
   background-color: rgb(179, 178, 178);
+  padding: 15px;
 }
 footer div {
   flex: 1 1;

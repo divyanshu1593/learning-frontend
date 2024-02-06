@@ -7,15 +7,26 @@ $footer-height: 10vh;
 $nav-bar-left-padding: 25vw;
 $nav-searchbar-height-ratio: 0.6;
 $search-bar-border-radius: 10px;
+$nav-bar-color: rgb(50, 202, 253);
+$footer-color: rgb(179, 178, 178);
 
 nav {
   height: $nav-bar-height;
-  background-color: black;
+  background-color: $nav-bar-color;
   padding-left: $nav-bar-left-padding;
 
   @media (max-width: 700px) {
     flex-direction: column;
     height: auto;
+    align-items: center;
+    padding: 5px;
+  }
+
+  @media (max-width: 900px) {
+    padding-left: math.div($nav-bar-left-padding, 2);
+  }
+
+  @media (max-width: 800px) {
     padding-left: 0px;
   }
 
@@ -29,7 +40,7 @@ nav {
   }
 
   button {
-    background-color: black;
+    background-color: $nav-bar-color;
     border: 0px;
     color: white;
     flex: 1 1;
@@ -39,6 +50,7 @@ nav {
   button:hover {
     background-color: white;
     color: black;
+    cursor: pointer;
   }
 }
 
@@ -53,8 +65,14 @@ nav {
 
 footer {
   height: $footer-height;
+  background-color: $footer-color;
   div {
     flex: 1 1;
+  }
+
+  @media (max-width: 700px) {
+    flex-direction: column;
+    height: auto;
   }
 }
 
@@ -106,4 +124,11 @@ footer {
 
 #twitter-btn:hover {
   box-shadow: 0px 0px 20px grey;
+}
+
+#middle-section {
+  @media (max-width: 700px) {
+    flex-direction: column;
+    align-items: center;
+  }
 }

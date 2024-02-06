@@ -1,12 +1,23 @@
 nav {
   height: 10vh;
-  background-color: black;
+  background-color: rgb(50, 202, 253);
   padding-left: 25vw;
 }
 @media (max-width: 700px) {
   nav {
     flex-direction: column;
     height: auto;
+    align-items: center;
+    padding: 5px;
+  }
+}
+@media (max-width: 900px) {
+  nav {
+    padding-left: 12.5vw;
+  }
+}
+@media (max-width: 800px) {
+  nav {
     padding-left: 0px;
   }
 }
@@ -19,7 +30,7 @@ nav input {
   padding: 0px;
 }
 nav button {
-  background-color: black;
+  background-color: rgb(50, 202, 253);
   border: 0px;
   color: white;
   flex: 1 1;
@@ -28,6 +39,7 @@ nav button {
 nav button:hover {
   background-color: white;
   color: black;
+  cursor: pointer;
 }
 
 #search-icon {
@@ -41,9 +53,16 @@ nav button:hover {
 
 footer {
   height: 10vh;
+  background-color: rgb(179, 178, 178);
 }
 footer div {
   flex: 1 1;
+}
+@media (max-width: 700px) {
+  footer {
+    flex-direction: column;
+    height: auto;
+  }
 }
 
 #sidebar {
@@ -90,6 +109,13 @@ footer div {
 
 #twitter-btn:hover {
   box-shadow: 0px 0px 20px grey;
+}
+
+@media (max-width: 700px) {
+  #middle-section {
+    flex-direction: column;
+    align-items: center;
+  }
 }
 
 /*# sourceMappingURL=index.css.map */

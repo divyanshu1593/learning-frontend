@@ -13,6 +13,12 @@ nav {
   background-color: black;
   padding-left: $nav-bar-left-padding;
 
+  @media (max-width: 700px) {
+    flex-direction: column;
+    height: auto;
+    padding-left: 0px;
+  }
+
   input {
     border-top-right-radius: $search-bar-border-radius;
     border-bottom-right-radius: $search-bar-border-radius;

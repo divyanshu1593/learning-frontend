@@ -3,6 +3,13 @@ nav {
   background-color: black;
   padding-left: 25vw;
 }
+@media (max-width: 700px) {
+  nav {
+    flex-direction: column;
+    height: auto;
+    padding-left: 0px;
+  }
+}
 nav input {
   border-top-right-radius: 10px;
   border-bottom-right-radius: 10px;

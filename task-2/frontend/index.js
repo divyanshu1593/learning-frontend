@@ -21,6 +21,7 @@ function generateCard(user) {
   image.alt = 'user photo';
   image.style.height = '100px';
   image.style.width = '100px';
+  image.className = 'skeleton';
 
   const agePara = document.createElement('p');
   agePara.innerHTML = '<b>Age: </b>';

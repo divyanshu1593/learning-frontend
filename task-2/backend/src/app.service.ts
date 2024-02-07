@@ -8,7 +8,7 @@ export class AppService {
   getUsers(): User[] {
     const users = [];
 
-    for (let i = 0; i < 10; i++) {
+    for (let i = 0; i < 100; i++) {
       users.push(this.generateRandomUser());
     }
 

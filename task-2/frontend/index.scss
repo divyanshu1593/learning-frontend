@@ -1,0 +1,32 @@
+@use "sass:math";
+
+$grid-gap: 2vw;
+$card-padding: 1vw;
+$card-bg-color: rgb(223, 221, 221);
+
+.grid-container {
+  display: grid;
+  grid-template-columns: auto auto;
+  gap: $grid-gap;
+
+  @media (max-width: 600px) {
+    grid-template-columns: auto;
+  }
+}
+
+.card {
+  border: 1px solid black;
+  border-radius: 10px;
+  display: flex;
+  padding: $card-padding;
+  gap: $card-padding;
+  background: linear-gradient(
+    to left top,
+    rgba(255, 255, 255, 0.4),
+    rgba(87, 85, 85, 0.2)
+  );
+
+  backdrop-filter: blur(10px);
+  $shadow-distance: math.div($grid-gap, 4);
+  box-shadow: $shadow-distance $shadow-distance 10px grey;
+}

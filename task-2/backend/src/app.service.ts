@@ -19,7 +19,11 @@ export class AppService {
     const randomName = `${this.generateRandomString(this.getRandomInt(3, 10))} ${this.generateRandomString(this.getRandomInt(5, 10))}`;
     const randomAge = this.getRandomInt(5, 100);
 
-    return new User(randomName, randomAge, 'mock_photo.png');
+    return new User(
+      randomName,
+      randomAge,
+      `https://picsum.photos/${this.getRandomInt(0, 200)}/100`,
+    );
   }
 
   generateRandomString(length: number): string {

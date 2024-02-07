@@ -1,0 +1,22 @@
+.grid-container {
+  display: grid;
+  grid-template-columns: auto auto;
+  gap: 2vw;
+}
+@media (max-width: 600px) {
+  .grid-container {
+    grid-template-columns: auto;
+  }
+}
+
+.card {
+  border: 1px solid black;
+  border-radius: 10px;
+  display: flex;
+  padding: 1vw;
+  gap: 1vw;
+  background: linear-gradient(to left top, rgba(255, 255, 255, 0.4), rgba(87, 85, 85, 0.2));
+  -webkit-backdrop-filter: blur(10px);
+          backdrop-filter: blur(10px);
+  box-shadow: 0.5vw 0.5vw 10px grey;
+}/*# sourceMappingURL=index.css.map */

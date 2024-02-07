@@ -3,6 +3,13 @@
 $grid-gap: 2vw;
 $card-padding: 1vw;
 $card-bg-color: rgb(223, 221, 221);
+$card-hover-bg-color: rgb(160, 160, 160);
+$header-bg-color: rgb(1, 131, 253);
+
+* {
+  margin: 0px;
+  padding: 0px;
+}
 
 .grid-container {
   display: grid;
@@ -41,4 +48,25 @@ $card-bg-color: rgb(223, 221, 221);
   backdrop-filter: blur(10px);
   $shadow-distance: math.div($grid-gap, 4);
   box-shadow: $shadow-distance $shadow-distance 10px grey;
+}
+
+.card:hover {
+  background-color: $card-hover-bg-color;
+}
+
+header {
+  background-color: $header-bg-color;
+  height: 10vh;
+  display: flex;
+  align-items: center;
+  
+  h1 {
+    text-align: center;
+    width: 100%;
+    color: white;
+  }
+}
+
+#main {
+  padding: 2vw;
 }

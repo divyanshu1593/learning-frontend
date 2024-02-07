@@ -26,10 +26,12 @@ function generateCard(user) {
   const agePara = document.createElement('p');
   agePara.innerHTML = '<b>Age: </b>';
   agePara.appendChild(document.createTextNode(user.age));
+  agePara.style.margin = '2vh';
 
   const namePara = document.createElement('p');
   namePara.innerHTML = '<b>Name: </b>';
   namePara.appendChild(document.createTextNode(user.name));
+  namePara.style.margin = '2vh';
 
   const info = document.createElement('div');
   info.appendChild(namePara);

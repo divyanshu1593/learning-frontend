@@ -1,3 +1,8 @@
+* {
+  margin: 0px;
+  padding: 0px;
+}
+
 .grid-container {
   display: grid;
   grid-template-columns: auto auto;
@@ -34,4 +39,24 @@
   -webkit-backdrop-filter: blur(10px);
           backdrop-filter: blur(10px);
   box-shadow: 0.5vw 0.5vw 10px grey;
+}
+
+.card:hover {
+  background-color: rgb(160, 160, 160);
+}
+
+header {
+  background-color: rgb(1, 131, 253);
+  height: 10vh;
+  display: flex;
+  align-items: center;
+}
+header h1 {
+  text-align: center;
+  width: 100%;
+  color: white;
+}
+
+#main {
+  padding: 2vw;
 }/*# sourceMappingURL=index.css.map */
